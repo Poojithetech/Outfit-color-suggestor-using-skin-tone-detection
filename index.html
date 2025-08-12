@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Image</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; padding: 40px; }
+        video, canvas { border: 2px solid #6a0dad; border-radius: 8px; }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #6a0dad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📷 Capture Image for Skin Tone Detection</h1>
+
+    <video id="video" width="320" height="240" autoplay></video><br>
+    <button onclick="captureImage()">Capture</button><br><br>
+
+    <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+
+    <form id="imageForm" method="POST" action="/analyze">
+        <input type="hidden" name="image_data" id="image_data">
+    </form>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const imageDataInput = document.getElementById('image_data');
+        const form = document.getElementById('imageForm');
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            });
+
+        function captureImage() {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const dataURL = canvas.toDataURL('image/jpeg');
+            imageDataInput.value = dataURL;
+            form.submit();  // auto-submit after capture
+        }
+    </script>
+</body>
+</html>
