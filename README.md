@@ -32,18 +32,6 @@ A real-time styling assistant that uses a webcam to detect a user's skin tone an
 
 ---
 
-## 🛠️ Installation
-
-Clone this repository and install dependencies:
-
-```bash
-git clone https://github.com/yourusername/skin-tone-color-suggestor.git
-cd skin-tone-color-suggestor
-pip install -r requirements.txt
-```
-
----
-
 ## ▶️ How to Use
 
 1. Connect your webcam  
