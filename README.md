@@ -5,7 +5,7 @@ A real-time styling assistant that uses a webcam to detect a user's skin tone an
 ---
 ## 📸 Demo
 
-![Demo Screenshot](./demo/Screenshot_2025-08-12_210320.png)
+![Demo Screenshot](./demo/Screenshot 2026-01-28 124813.png)
 
 ---
 
