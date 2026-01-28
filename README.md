@@ -3,11 +3,6 @@
 A real-time styling assistant that uses a webcam to detect a user's skin tone and recommend the best clothing colors based on color theory. This project blends computer vision, machine learning, and fashion knowledge to help users choose outfit colors that enhance their appearance.
 
 ---
-## 📸 Demo
-
-![Demo Screenshot](./demo/Screenshot 2026-01-28 124813.png)
-
----
 
 ## 🚀 Features
 
